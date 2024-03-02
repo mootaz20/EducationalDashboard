@@ -1,0 +1,57 @@
+<div class="allContent">
+    <div class="shape p-2">
+        <div class="row text-center">
+            <div class="col-10">
+                <p class="fs-2 fw-bold">CREATE COURSE</p>
+            </div>
+            <div class="col-2">
+                <a href="" (click)="onCLose()"><i class="fa fa-close" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div>
+            <form #CreateCourse="ngForm" (ngSubmit)="onCreate(CreateCourse)">
+                <div class="row ">
+                    <div class="col-6">
+                        <label for="title">Title :</label>
+                        <input type="text" ngModel id="title" name="title" placeholder="Enter Course Title..." required>
+                    </div>
+                    <div class="col-6">
+                        <label for="author">Author:</label>
+                        <input type="text" ngModel id="author" name="author" placeholder="Enter Author here..."
+                            required>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-6">
+                        <label for="duration">Duration :</label>
+                        <input type="number" ngModel id="duration" name="duration"
+                            placeholder="Enter Course Duration..." required>
+                    </div>
+                    <div class="col-6">
+                        <label for="rating">Rating:</label>
+                        <input type="number" ngModel id="rating" name="rating" placeholder="Enter rating here..."
+                            required>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-6">
+                        <label for="price">Price :</label>
+                        <input type="number" ngModel id="price" name="price" placeholder="Enter Course Price..."
+                            required>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <label for="description">Description :</label>
+                        <textarea name="description" ngModel rows="2" cols="50" id="description"></textarea>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-outline-danger fw-bold">ADD</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

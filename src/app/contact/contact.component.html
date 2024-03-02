@@ -1,0 +1,34 @@
+<div class="container hieght mt-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <button type="button" class="btn btn-outline-danger fw-bold" routerLink="">DASHBOARD PAGE</button>
+        </div>
+    </div>
+    <div class="loader-container" *ngIf="isloader">
+        <div class="loader"></div>
+    </div>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">FIRSTNAME</th>
+                <th scope="col">LASTNAME</th>
+                <th scope="col">COUNTRY</th>
+                <th scope="col">SUBJECT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let message of messages; let i = index;">
+                <th scope="row">{{i+1}}</th>
+                <td>{{message.first}}</td>
+                <td>{{message.last}}</td>
+                <td>
+                    {{message.country}}
+                </td>
+                <td>
+                    {{message.subject | uppercase}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
